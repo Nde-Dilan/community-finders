@@ -2,6 +2,7 @@ import Event from '@/components/event'
 import { Icons } from '@/components/icons'
 import { Badge } from '@/components/ui/badge'
 import { Community, events, links } from '@/data/data'
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
@@ -12,7 +13,7 @@ const CommunityPage = () => {
     <div>
       <section>
         <div className='border border-sky-100 mb-4'>
-          <img src={`${Community.bannerUrl}`} alt="Community's image" />
+          <Image width={100} height={100} src={`${Community.bannerUrl}`} alt="Community's image" />
         </div> 
         <div className="mt-auto flex flex-col px-2">
           {Community.socials && Community.socials.length > 0 && (
@@ -40,8 +41,8 @@ const CommunityPage = () => {
       </section>
       <br />
       <section className='statistique grid grid-cols-2 gap-4 '>
-        {Community.satistique && Community.satistique.length >=1 && Community.satistique.map(el => (
-          <div className="border-4 p-6 cursor-pointer">
+        {Community.satistique && Community.satistique.length >=1 && Community.satistique.map((el,id) => (
+          <div className="border-4 p-6 cursor-pointer" key={el.number + id}>
           <h1 className=" font-bold text-3xl">{el.number}</h1>
           <p> {el.description}</p>
         </div>

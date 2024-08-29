@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 const Event = ({title,
@@ -7,7 +8,7 @@ const Event = ({title,
   return (
     <div className="border-2 lg: lg:m-2 cursor-pointer p-2 m-1">
       <div className="flex justify-between flex-col">
-      <img src={image} alt={title} className="w-full" />
+      <Image width={100} height={100} src={image} alt={title} className="w-full" />
         <h2 className="md:text-2xl font-bold">{title}</h2>
         
       </div>
