@@ -138,14 +138,13 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY * 12 + id * 0.05}
               >
                 <ProjectCard
-                  href={community.href}
+                  href={`/community/${id}`}
                   key={community.title}
                   title={community.title}
                   description={community.description}
                   dates={community.dates}
                   tags={community.technologies}
                   image={community.image}
-                  video={community.video}
                   links={community.links}
                 />
               </BlurFade>
@@ -167,7 +166,7 @@ export default function Page() {
                 <p className="text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   During my time in university, I attended{" "}
                   {DATA.hackathons.length}+ hackathons. People from around the
-                  country would come together and build incredible things in 2-3
+                  country(and the globe) would come together (online or onsite) and build incredible things in 2-3
                   days. It was eye-opening to see the endless possibilities
                   brought to life by a group of motivated and passionate
                   individuals.
@@ -210,12 +209,11 @@ export default function Page() {
                 Want to chat? Just shoot me a dm{" "}
                 <Link
                   href={DATA.contact.social.WhatsApp.url}
-                  className="text-blue-500 hover:underline"
+                  className="text-green-500 hover:underline"
                 >
-                  with a direct question on twitter
+                  with a direct question on WhatsApp
                 </Link>{" "}
-                and I&apos;ll respond whenever I can. I will ignore all
-                soliciting.
+                and I&apos;ll respond whenever I can. I would be glad to contribute to your next big idea!
               </p>
             </div>
           </BlurFade>

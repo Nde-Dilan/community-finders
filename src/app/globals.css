@@ -142,3 +142,9 @@ code[data-line-numbers-max-digits="2"] > [data-line]::before {
 code[data-line-numbers-max-digits="3"] > [data-line]::before {
   width: 3rem;
 }
+
+.statistique{
+  display: grid;
+  /* border: 8px solid red; */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
